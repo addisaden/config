@@ -25,3 +25,5 @@ set noerrorbells
 
 set statusline=%f\ :\ %y\ %r\ %M%=[%n:\ %l\ %c]\ %h\ %p%%
 set laststatus=2
+
+set backspace=indent,eol,start
