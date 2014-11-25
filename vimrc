@@ -27,3 +27,11 @@ set statusline=%f\ :\ %y\ %r\ %M%=[%n:\ %l\ %c]\ %h\ %p%%
 set laststatus=2
 
 set backspace=indent,eol,start
+
+"Use of Panthogen to run Vim-fireplace (clojure nrepl)
+execute pathogen#infect()
+
+command Heb set invrl
+map <C-l> :set invrl<CR>
+
+command Todos :e scp://addisaden@claddis.de/todos.txt
