@@ -23,6 +23,8 @@ set showmatch
 set novisualbell
 set noerrorbells
 
+set noeb vb t_vb=
+
 set statusline=%f\ :\ %y\ %r\ %M%=[%n:\ %l\ %c]\ %h\ %p%%
 set laststatus=2
 
@@ -35,3 +37,7 @@ command Heb set invrl
 map <C-l> :set invrl<CR>
 
 command Todos :e scp://addisaden@claddis.de/todos.txt
+command TodosBackup :! scp addisaden@claddis.de:./todos.txt ~/.backup.todos.claddis.de.txt
+command TodosRestore :! scp ~/.backup.todos.claddis.de.txt addisaden@claddis.de:./todos.txt
+
+let @T='^I-- A --yyP^v$hr-$hhxxI yyjpo'
