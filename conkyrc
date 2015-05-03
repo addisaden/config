@@ -53,10 +53,12 @@ $alignr ${memperc}%
 ${color #aaaaaa}$alignr Updates  ${execpi 3600 checkupdates | wc -l}${color #ff9933}
 
 ${color #ffffff}$alignr Network${color #ff9933}
-${color #777777}$alignr wlp2s0${color #ff9933}
+${color #aaaaaa}$alignr wlp2s0${color #ff9933}
+${color #777777}$alignr ${addr wlp2s0}${color #ff9933}
 $alignr ${downspeedf wlp2s0} KiB/s D
 $alignr ${upspeedf wlp2s0} KiB/s U
-${color #777777}$alignr enp0s25${color #ff9933}
+${color #aaaaaa}$alignr enp0s25${color #ff9933}
+${color #777777}$alignr ${addr enp0s25}${color #ff9933}
 $alignr ${downspeedf enp0s25} KiB/s D
 $alignr ${upspeedf enp0s25} KiB/s U
 
