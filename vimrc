@@ -12,7 +12,7 @@ set smartcase
 set hls
 set incsearch
 
-colorscheme delek
+colorscheme desert
 
 set shiftwidth=2
 set tabstop=2
@@ -41,3 +41,6 @@ command TodosBackup :! scp addisaden@claddis.de:./todos.txt ~/.backup.todos.clad
 command TodosRestore :! scp ~/.backup.todos.claddis.de.txt addisaden@claddis.de:./todos.txt
 
 let @T='^I-- A --yyP^v$hr-$hhxxI yyjpo'
+
+set shell=/usr/bin/bash
+

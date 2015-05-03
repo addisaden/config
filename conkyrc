@@ -1,0 +1,67 @@
+background yes
+
+alignment top_right
+
+cpu_avg_samples 4
+
+use_xft yes
+
+xftfont Andale Mono-11
+
+update_interval 0.5
+
+total_run_times 0
+
+update_interval_on_battery 10
+
+double_buffer yes
+
+own_window yes
+
+own_window_type desktop
+own_window_argb_visual yes
+
+own_window_transparent yes
+
+default_bar_size 80 8
+
+gap_y 20
+
+gap_x 20
+
+use_spacer left
+
+pad_percents 3
+
+temperature_unit Celsius
+
+
+TEXT
+
+${color #ffffff}$alignr $nodename
+${color #777777}$alignr ${execi 100 whoami}
+${color #ff9933}$alignr $kernel
+$alignr $machine
+
+${color #ffffff}$alignr Cpu${color #ff9933}
+$alignr ${cpu cpu0}% ${cpu cpu2}%
+$alignr ${cpu cpu1}% ${cpu cpu3}%
+
+${color #ffffff}$alignr Mem${color #ff9933}
+$alignr ${memperc}%
+
+${color #aaaaaa}$alignr Updates  ${execpi 3600 checkupdates | wc -l}${color #ff9933}
+
+${color #ffffff}$alignr Network${color #ff9933}
+${color #777777}$alignr wlp2s0${color #ff9933}
+$alignr ${downspeedf wlp2s0} KiB/s D
+$alignr ${upspeedf wlp2s0} KiB/s U
+${color #777777}$alignr enp0s25${color #ff9933}
+$alignr ${downspeedf enp0s25} KiB/s D
+$alignr ${upspeedf enp0s25} KiB/s U
+
+${color #ffffff}$alignc ** Apps * Cpu **${color #ff9933}
+${execpi 10 ps -A -o %cpu,comm --sort -%cpu --no-headers | head -5}
+
+${color #ffffff}$alignc ** Apps * Mem **${color #ff9933}
+${execpi 10 ps -A -o %mem,comm --sort -%mem --no-headers | head -5}
