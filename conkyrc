@@ -62,8 +62,11 @@ ${color #777777}$alignr ${addr enp0s25}${color #ff9933}
 $alignr ${downspeedf enp0s25} KiB/s D
 $alignr ${upspeedf enp0s25} KiB/s U
 
+${color #ffffff}Docker${color #ff9933}
+${execpi 30 /home/addisaden/code/config/docker_status.sh}
+
 ${color #ffffff}$alignc ** Apps * Cpu **${color #ff9933}
-${execpi 10 ps -A -o %cpu,comm --sort -%cpu --no-headers | head -5}
+${execpi 10 ps -A -o %cpu,comm --sort -%cpu --no-headers | head -4}
 
 ${color #ffffff}$alignc ** Apps * Mem **${color #ff9933}
-${execpi 10 ps -A -o %mem,comm --sort -%mem --no-headers | head -5}
+${execpi 10 ps -A -o %mem,comm --sort -%mem --no-headers | head -4}
