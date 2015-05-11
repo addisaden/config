@@ -11,3 +11,4 @@ PS3='> '
 PS4='+ '
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+export PATH="$PATH:/home/addisaden/.gem/ruby/2.2.0/bin"
