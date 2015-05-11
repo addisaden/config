@@ -15,4 +15,4 @@ PS3='> '
 PS4='+ '
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
-bash $HOME/.pathrc
+source $HOME/.pathrc
