@@ -38,30 +38,32 @@ temperature_unit Celsius
 
 TEXT
 
-${color #ffffff}$alignr $nodename
-${color #777777}$alignr ${execi 100 whoami}
-${color #ff9933}$alignr $kernel
-$alignr $machine
+${color #ffffff}$nodename
+${color #777777}${execi 100 whoami}
+${color #ff9933}$kernel
+$machine
+${time %x}
+${time %X}
 
-${color #ffffff}$alignr Cpu${color #ff9933}
-$alignr ${cpu cpu0}% ${cpu cpu2}%
-$alignr ${cpu cpu1}% ${cpu cpu3}%
+${color #ffffff}Cpu${color #ff9933}
+${cpu cpu0}% ${cpu cpu2}%
+${cpu cpu1}% ${cpu cpu3}%
 
-${color #ffffff}$alignr Mem${color #ff9933}
-$alignr ${memperc}%
+${color #ffffff}Mem${color #ff9933}
+${memperc}%
 
-${color #aaaaaa}$alignr Updates  ${execpi 3600 checkupdates | wc -l}${color #ff9933}
+${color #aaaaaa}Updates  ${execpi 3600 checkupdates | wc -l}${color #ff9933}
 
-${color #ffffff}$alignr Network${color #ff9933}
-${color #aaaaaa}$alignr wlp2s0${color #ff9933}
-${color #777777}$alignr ${wireless_essid wlp2s0}${color #ff9933}
-${color #777777}$alignr ${addr wlp2s0}${color #ff9933}
-$alignr ${downspeedf wlp2s0} KiB/s D
-$alignr ${upspeedf wlp2s0} KiB/s U
-${color #aaaaaa}$alignr enp0s25${color #ff9933}
-${color #777777}$alignr ${addr enp0s25}${color #ff9933}
-$alignr ${downspeedf enp0s25} KiB/s D
-$alignr ${upspeedf enp0s25} KiB/s U
+${color #ffffff}Network${color #ff9933}
+${color #aaaaaa}wlp2s0${color #ff9933}
+${color #777777}${wireless_essid wlp2s0}${color #ff9933}
+${color #777777}${addr wlp2s0}${color #ff9933}
+${downspeedf wlp2s0} KiB/s D
+${upspeedf wlp2s0} KiB/s U
+${color #aaaaaa}enp0s25${color #ff9933}
+${color #777777}${addr enp0s25}${color #ff9933}
+${downspeedf enp0s25} KiB/s D
+${upspeedf enp0s25} KiB/s U
 
 ${color #ffffff}Docker${color #ff9933}
 ${execpi 30 /home/addisaden/code/config/docker_status.sh}
