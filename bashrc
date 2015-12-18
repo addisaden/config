@@ -14,5 +14,7 @@ PS2='> '
 PS3='> '
 PS4='+ '
 
+alias ls="ls --color=auto"
+
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 source $HOME/.pathrc
