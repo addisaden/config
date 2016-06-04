@@ -44,3 +44,5 @@ let @T='^I-- A --yyP^v$hr-$hhxxI yyjpo'
 
 set shell=/usr/bin/bash
 
+
+let NERDTreeIgnore = ['\.pyc$','\.pyo$']

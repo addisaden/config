@@ -15,4 +15,5 @@ PS3='> '
 PS4='+ '
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+complete -C "/usr/bin/aws_completer" aws
 source $HOME/.pathrc
